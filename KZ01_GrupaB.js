@@ -56,6 +56,13 @@ const peopleYouShouldKnow = {
     Martin: "Fowler",
     Erich: "Gamma"
 }
+function najdulji(somePeople) {
+    for (const key in somePeople) {
+        console.log(value)
+    }
+}
+
+najdulji(peopleYouShouldKnow)
 //INPUT: somePeople
 //OUTPUT: "Stroustrup"
 
@@ -68,16 +75,7 @@ const peopleYouShouldKnow = {
 //Napisi funkciju u obliku arrow functiona koja pretvara mala slova danih inputa u velika slova
 //INPUT: ["aa", "b1", "", null, "AAA"]
 //OUTPUT: ["AA","B1", "", null, "AAA"]
-let velikaSlova = (arr) => {
-    arr.toString
-    for (let i = 0; i < arr.length; i++) {
-        arr[i].toUpperCase
-    }
-}
-let str = ["aa", "b1", "", null, "AAA"]
-str.toString
-console.log(str)
-// velikaSlova(["aa", "b1", "", null, "AAA"])
+
 //6 (4 BODA)
 //Napisi funkciju koja vraca sve drzave koji su imali manju temperaturu od one iz ulaznog parametra
 const someEvents = [
@@ -102,5 +100,12 @@ const someEvents = [
         measuredTemperature: 48.0,
     },
 ];
+function temperatura(arr, broj) {
+    arr.forEach(element => {
+        if (element.measuredTemperature < broj)
+            console.log(element)
+    });
+}
+temperatura(someEvents, 48.5)
 //INPUT: (someStates, 48.5)
 //OUTPUT: [{stateName: "Grcka", measuredTemperature: 48.0}]
