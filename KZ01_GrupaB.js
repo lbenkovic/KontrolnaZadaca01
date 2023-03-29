@@ -5,7 +5,7 @@ function neparni() {
         console.log(index)
     }
 }
-//neparni()
+neparni()
 
 //2 (3 BODA)
 //Napisi funkciju koja koristi switch selekciju za pretvaranje numerickog unosa u godisnje u doba. Za neispravan unos ispisi prikladnu poruku.
@@ -31,7 +31,8 @@ function godisnjeDoba(broj) {
     }
 }
 
-//godisnjeDoba(1)
+godisnjeDoba(1)
+godisnjeDoba(3)
 
 //3 (4 BODA)
 //Napisi funkciju koja okrece uneseni string i broji charactere uzimajuci u obzir prazna mjesta (eng. whitespaces)
@@ -45,7 +46,7 @@ function okreni(str) {
     console.log(noviStr, ",", noviStr.length)
 }
 
-// okreni("Pisanje zadataka nije jednostavan posao")
+okreni("Pisanje zadataka nije jednostavan posao")
 //4 (4 BODA)
 //Napisi funkciju koja odreduje najdulju vrijednostu u danom objektu
 const peopleYouShouldKnow = {
@@ -61,12 +62,22 @@ function najdulji(somePeople) {
     let najduzi = 0
     for (const key in somePeople) {
         if (somePeople.hasOwnProperty.call(somePeople, key)) {
-            arr.push(somePeople)
-
+            arr.push(somePeople[key].length)
+        }
+    }
+    najduzi = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > najduzi) {
+            najduzi = arr[i]
+        }
+    }
+    for (const key in somePeople) {
+        if (somePeople.hasOwnProperty.call(somePeople, key)) {
+            if (somePeople[key].length === najduzi)
+                console.log(somePeople[key])
         }
     }
 }
-
 
 najdulji(peopleYouShouldKnow)
 //INPUT: somePeople
@@ -112,6 +123,6 @@ function temperatura(arr, broj) {
             console.log(element)
     });
 }
-//temperatura(someEvents, 48.5)
+temperatura(someEvents, 48.5)
 //INPUT: (someStates, 48.5)
 //OUTPUT: [{stateName: "Grcka", measuredTemperature: 48.0}]
