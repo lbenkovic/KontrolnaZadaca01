@@ -37,15 +37,15 @@ function godisnjeDoba(broj) {
 //Napisi funkciju koja okrece uneseni string i broji charactere uzimajuci u obzir prazna mjesta (eng. whitespaces)
 //INPUT: "Pisanje zadataka nije jednostavan posao"
 //OUTPUT: ("oasop navatsondej ejin akatadaz ejnasiP", 39)
-function okreni(inputStr) {
-    let stariStr = inputStr
-
-    for (let i = stariStr.length - 1; i < 0; i--) {
-        console.log(stariStr[i])
-
+function okreni(str) {
+    let noviStr = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        noviStr += str[i]
     }
+    console.log(noviStr, ",", noviStr.length)
 }
-okreni("Pisanje zadataka nije jednostavan posao")
+
+// okreni("Pisanje zadataka nije jednostavan posao")
 //4 (4 BODA)
 //Napisi funkciju koja odreduje najdulju vrijednostu u danom objektu
 const peopleYouShouldKnow = {
@@ -68,7 +68,13 @@ const peopleYouShouldKnow = {
 //Napisi funkciju u obliku arrow functiona koja pretvara mala slova danih inputa u velika slova
 //INPUT: ["aa", "b1", "", null, "AAA"]
 //OUTPUT: ["AA","B1", "", null, "AAA"]
-
+let velikaSlova = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].toUpperCase()
+    }
+    return arr
+}
+console.log(velikaSlova(["aa", "b1", "", null, "AAA"]))
 //6 (4 BODA)
 //Napisi funkciju koja vraca sve drzave koji su imali manju temperaturu od one iz ulaznog parametra
 const someEvents = [
