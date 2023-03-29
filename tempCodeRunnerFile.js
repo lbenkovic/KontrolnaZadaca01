@@ -1,1 +1,1 @@
-noviStr += str[i]
+velikaSlova(["aa", "b1", "", null, "AAA"])
