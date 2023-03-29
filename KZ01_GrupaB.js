@@ -57,10 +57,16 @@ const peopleYouShouldKnow = {
     Erich: "Gamma"
 }
 function najdulji(somePeople) {
+    let arr = []
+    let najduzi = 0
     for (const key in somePeople) {
-        console.log(value)
+        if (somePeople.hasOwnProperty.call(somePeople, key)) {
+            arr.push(somePeople)
+
+        }
     }
 }
+
 
 najdulji(peopleYouShouldKnow)
 //INPUT: somePeople
@@ -106,6 +112,6 @@ function temperatura(arr, broj) {
             console.log(element)
     });
 }
-temperatura(someEvents, 48.5)
+//temperatura(someEvents, 48.5)
 //INPUT: (someStates, 48.5)
 //OUTPUT: [{stateName: "Grcka", measuredTemperature: 48.0}]
