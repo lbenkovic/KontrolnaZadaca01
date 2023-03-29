@@ -1,0 +1,1 @@
+noviStr += str[i]
